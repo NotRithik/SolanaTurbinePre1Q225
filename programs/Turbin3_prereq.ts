@@ -1,4 +1,6 @@
-export const IDL = {
+import type { Idl } from '@coral-xyz/anchor';
+
+export const IDL: Idl = {
     "address": "Trb3aEx85DW1cEEvoqEaBkMn1tfmNEEEPaKzLSu4YAv",
     "metadata": {
         "name": "turbine_prereq",
@@ -190,6 +192,6 @@ export const IDL = {
             }
         }
     ]
-} as const;
+};
 
 export type Turbin3Prereq = typeof IDL;

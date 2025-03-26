@@ -2,9 +2,9 @@ use bs58;
 use std::io::{self, BufRead};
 
 fn base58_to_wallet() {
-    println!("Enter your name:");
-    let stdin = io::stdin();
-    let base58 = stdin.lock().lines().next().unwrap().unwrap(); // gdtKSTXYULQNx87fdD3YgXkzVeyFeqwtxHm6WdEb5a9YJRnHse7GQr7t5pbepsyvUCk7VvksUGhPt4SZ8JHVSkt
+    let base58 = String::from(
+        "4ch9MATLS7ntfuz9tPMgnk62DvxihnrgHyw4rYoe2xSCti9R7sLzR9UuqpYvgHvAejFCh8oq6fPUxFpSVxEfcAp9",
+    );
     let wallet = bs58::decode(base58).into_vec().unwrap();
     println!("{:?}", wallet);
 }
